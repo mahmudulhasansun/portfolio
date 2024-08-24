@@ -319,7 +319,7 @@ input:checked+.slider:before {
 	height: 10px;
 	width: 10px;
 	border-radius: 50%;
-	background: radial-gradient(var(--secondary-color) 40%, var(--primary-color), var(--secondary-color), var(--bg-dark));
+	background: radial-gradient(var(--primary-color) 40%, var(--primary-color), var(--secondary-color), var(--bg-dark));
 	box-shadow: 3px 5px 10px rgba(255, 255, 255, 0.514);
 
 }
