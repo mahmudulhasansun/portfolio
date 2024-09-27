@@ -6,7 +6,6 @@
     list-style: none;
     scroll-behavior: smooth;
     text-decoration: none;
-    scrollbar-color: var(--primary-color) var(--primary-color);
     scrollbar-width: thin;
 }
 
@@ -106,6 +105,9 @@ body {
 .theme-switch-wrapper {
     padding-left: 15px;
 }
+.theme-switch {
+    padding-top: 5px;
+}
 .theme-switch input {
     display: none;
 }
@@ -192,9 +194,11 @@ input:checked+.slider:before {
     min-height: 100vh;
     padding-top: 150px;
     text-align: justify;
+
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .home .home-left .img-box img {
     padding-top: 0;
     border-radius: 50%;
@@ -314,156 +318,13 @@ input:checked+.slider:before {
 }
 /* home end */
 /* particle start */
-.particle-container .particle{
-	position: absolute;
-	height: 10px;
-	width: 10px;
-	border-radius: 50%;
-	background: radial-gradient(var(--primary-color) 40%, var(--primary-color), var(--secondary-color), var(--bg-dark));
-	box-shadow: 3px 5px 10px rgba(255, 255, 255, 0.514);
-
-}
-[data-bs-theme="light"] .particle-container .particle{
-	background: radial-gradient(var(--primary-color) 40%, var(--primary-color), var(--secondary-color), var(--bg-dark));
-}
-[data-bs-theme="dark"] .particle-container .particle{
-	background: radial-gradient(rgb(255, 245, 153) 40%, rgb(247, 211, 51), orange, rgb(255, 81, 0));}
-
-.particle-container .particle:nth-child(1){
-	top: 12%;
-	left: 42%;
-	animation: particle-motion 1s linear infinite;
-}
-
-.particle-container .particle:nth-child(2){
-	top: 70%;
-	left: 50%;
-	animation: particle-motion 7s linear infinite;
-}
-.particle-container .particle:nth-child(3){
-	top: 17%;
-	left: 6%;
-	animation: particle-motion 9s linear infinite;
-}
-.particle-container .particle:nth-child(4){
-	top: 20%;
-	left: 60%;
-	animation: particle-motion 10s linear infinite;
-}
-.particle-container .particle:nth-child(5){
-	top: 67%;
-	left: 10%;
-	animation: particle-motion 6s linear infinite;
-}
-.particle-container .particle:nth-child(6){
-	top: 80%;
-	left: 70%;
-	animation: particle-motion 11s linear infinite;
-}
-.particle-container .particle:nth-child(7){
-	top: 60%;
-	left: 80%;
-	animation: particle-motion 6s linear infinite;
-}
-.particle-container .particle:nth-child(8){
-	top: 32%;
-	left: 25%;
-	animation: particle-motion 6s linear infinite;
-}
-.particle-container .particle:nth-child(9){
-	top: 90%;
-	left: 25%;
-	animation: particle-motion 9s linear infinite;
-}
-.particle-container .particle:nth-child(10){
-	top: 10%;
-	left: 80%;
-	animation: particle-motion 5s linear infinite;
-}
-
-.particle-container .particle:nth-child(11){
-	top: 24%;
-	left: 82%;
-	animation: particle-motion 10s linear infinite;
-}
-
-.particle-container .particle:nth-child(12){
-	top: 97%;
-	left: 5%;
-	animation: particle-motion 7s linear infinite;
-}
-.particle-container .particle:nth-child(13){
-	top: 97%;
-	left: 60%;
-	animation: particle-motion 9s linear infinite;
-}
-.particle-container .particle:nth-child(14){
-	top: 30%;
-	left: 40%;
-	animation: particle-motion 5s linear infinite;
-}
-.particle-container .particle:nth-child(15){
-	top: 47%;
-	left: 55%;
-	animation: particle-motion 7s linear infinite;
-}
-.particle-container .particle:nth-child(16){
-	top: 70%;
-	left: 80%;
-	animation: particle-motion 8s linear infinite;
-}
-.particle-container .particle:nth-child(17){
-	top: 40%;
-	left: 40%;
-	animation: particle-motion 10s linear infinite;
-}
-.particle-container .particle:nth-child(18){
-	top: 23%;
-	left: 15%;
-	animation: particle-motion 4s linear infinite;
-}
-.particle-container .particle:nth-child(19){
-	top: 90%;
-	left: 90%;
-	animation: particle-motion 3s linear infinite;
-}
-
-.particle-container .particle:nth-child(20){
-	top: 85%;
-	left: 95%;
-	animation: particle-motion 7s linear infinite;
-}
-
-@keyframes particle-motion {
-	0%{
-		transform: translate(0);
-		opacity: 1;
-	}
-
-	20%{
-		transform: translate(5px -20px);
-		opacity: 0.8;
-	}
-
-	40%{
-		transform: translate(-10px, -30px);
-		opacity: 0.7;
-	}
-
-	60%{
-		transform: translate(15px, -40px);
-		opacity: 0.5;
-	}
-
-	80%{
-		transform: translate(-20px, -60px);
-		opacity: 0.2;
-	}
-
-	100%{
-		transform: translate(40px, -100px);
-		opacity: 0;
-	}
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 /* particle end */
 /* about start */
@@ -688,7 +549,7 @@ input:checked+.slider:before {
     color: var(--bg-dark);
     text-align: center;
     height: 160px;
-    width: 160px;
+    width: 100%;
     padding: 30px 25px 25px;
     margin: 0 auto;
     border: 3px solid var(--primary-color);
@@ -756,7 +617,7 @@ input:checked+.slider:before {
     justify-content: center;
     align-items: center;
     background-color: var(--text-light);
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
 }
 [data-bs-theme="dark"] .certificate-section {
@@ -859,11 +720,13 @@ input:checked+.slider:before {
   .portfolio .portfolio-content {
     position: relative;
     overflow: hidden;
+    border: 2px solid var(--primary-color);
+
   }
   
   .portfolio .portfolio-content img {
     transition: 0.3s;
-    width: 350px;
+    width: 100%;
     height: 250px;
   }
   
@@ -1135,7 +998,7 @@ input:checked+.slider:before {
 
     .counter{
         height: 110px;
-        width: 110px;
+        width: 100%;
     }
     .counter:before, .counter:after{
 
@@ -1248,7 +1111,7 @@ input:checked+.slider:before {
     }
     .counter{
         height: 110px;
-        width: 110px;
+        width: 100%;
     }
     .counter:before, .counter:after{
 
@@ -1357,7 +1220,7 @@ input:checked+.slider:before {
     }
     .counter{
         height: 110px;
-        width: 110px;
+        width: 100%;
     }
     .counter:before, .counter:after{
 
@@ -1369,13 +1232,13 @@ input:checked+.slider:before {
         height: 80px;
     }
     .counter .counter-icon{
-        font-size: 20px;
+        font-size: 18px;
         line-height: 10px;
         margin: 0 0 10px;
     }
     
     .counter .counter-value-container {
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 400;
         /* margin: 0 0 20px; */
     }

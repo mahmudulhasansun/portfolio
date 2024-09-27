@@ -53,28 +53,18 @@
         <!-- home start -->
         <section class="home" id="home">
             <div class="container">
-                <div class="particle-container">
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                </div>
+                <div class="min-vh-100" id="particles-js"></div>
+                <style>
+                    /* Particle container styling */
+                    [data-bs-theme="light"] {
+                        --particle-color-primary: var( --bg-dark); /* Dark theme particle color */
+                        --particle-color-secondary: var( --bg-dark);
+                    }
+                    [data-bs-theme="dark"] {
+                        --particle-color-primary: var( --bg-light); /* Light theme particle color */
+                        --particle-color-secondary: var( --bg-light);
+                    }
+                </style>
                 <div class="row align-items-center">
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center">
                         <div class="home-left">
@@ -710,4 +700,7 @@
     <script src="./frontend/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <!-- custom js -->
     <script src="./frontend/assets/js/main.js"></script>
+    <!-- particle js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="./frontend/assets/js/particle.js"></script>
 </html>
